@@ -16,10 +16,10 @@ class GradeController extends Controller
     {
         // Validasi input
         $validator = Validator::make($request->all(), [
-            'partisipasi' => 'required|numeric|greater_than_equal_to[0]|less_than_equal_to[100]',
-            'tugas' => 'required|numeric|greater_than_equal_to[0]|less_than_equal_to[100]',
-            'uts' => 'required|numeric|greater_than_equal_to[0]|less_than_equal_to[100]',
-            'uas' => 'required|numeric|greater_than_equal_to[0]|less_than_equal_to[100]'
+            'partisipasi' => 'required|numeric',
+            'tugas' => 'required|numeric',
+            'uts' => 'required|numeric',
+            'uas' => 'required|numeric'
         ]);
 
         if ($validator->fails()) {
